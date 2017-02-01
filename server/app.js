@@ -1,9 +1,17 @@
 var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');
+var sequelize = require('./db.js');
+var User = sequelize.import('./models/user');
 
+//creates a table in postgres
+User.sync();
 
+//DANGER: deletes the entire table
+// User.sync({force:true});
 
+//telling the app to use body-Parser
+app.use(bodyParser.json());
 
 //creating a middleware header//
 app.use(require('./middleware/header'));
@@ -18,36 +26,11 @@ app.listen(3000, function() {
 	console.log("app is listening on 3000");
 });
 
-var Sequelize = require('sequelize');
-var sequelize = new Sequelize('workoutlog', 'postgres', 'codequeen', {
-	host: 	'localhost',
-	dialect: 	'postgres'  
-});
-
-sequelize.authenticate().then(
-	function() {
-		console.log("connected to workoutlog postgres db");
-	},
-	function(err) {
-		console.log(err);
-	}
-);
-
-//telling the app to use body-Parser
-app.use(bodyParser.json());
-
-
-
-//build a user model in squelize
-var User = sequelize.define('user', {
-	username: Sequelize.STRING,
-	passwordhash: Sequelize.STRING,
-});
-//creates a table in postgres
-User.sync();
-
-//DANGER: deletes the entire table
-// User.sync({force:true});
+//build a user model in squelize moved to user.js
+// var User = sequelize.define('user', {
+// 	username: Sequelize.STRING,
+// 	passwordhash: Sequelize.STRING,
+// });
 
 //creating an endpoint
 app.post('/api/user', function(req,res) {
