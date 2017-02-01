@@ -2,7 +2,6 @@ var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');
 var sequelize = require('./db.js');
-
 var User = sequelize.import('./models/user.js');
 
 //creates a table in postgres
@@ -17,6 +16,9 @@ app.use(bodyParser.json());
 app.use(require('./middleware/header'));
 
 app.use('/api/user', require('./routes/user'));
+
+//login route
+app.use('api/login', require('./routes/session'));
 
 //creating link to api and creating feedback it is working//
 app.use('/api/test', function(req, res) {
