@@ -47,7 +47,7 @@ var User = sequelize.define('user', {
 User.sync();
 
 //DANGER: deletes the entire table
-//User.sync({force:true});
+// User.sync({force:true});
 
 //creating an endpoint
 app.post('/api/user', function(req,res) {
