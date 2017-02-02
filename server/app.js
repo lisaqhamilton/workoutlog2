@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');
@@ -14,6 +16,8 @@ app.use(bodyParser.json());
 
 //creating a middleware header//
 app.use(require('./middleware/header'));
+
+app.use(require('./middleware/validate-session'));
 
 app.use('/api/user', require('./routes/user'));
 
