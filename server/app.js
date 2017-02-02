@@ -18,7 +18,7 @@ app.use(require('./middleware/header'));
 app.use('/api/user', require('./routes/user'));
 
 //login route
-app.use('api/login', require('./routes/session'));
+app.use('/api/login', require('./routes/session'));
 
 //creating link to api and creating feedback it is working//
 app.use('/api/test', function(req, res) {

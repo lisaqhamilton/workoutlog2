@@ -6,17 +6,17 @@ var User = sequelize.import('../models/user');
 
 
 //creating an endpoint
-router.post(' / ', function(req,res) {
+router.post('/', function(req,res){
 
 	var username = req.body.user.username;
 	var pass = req.body.user.password;
-		User.create( {
+		User.create({
 			username: username,
 			passwordhash: bcrypt.hashSync(pass,10)
 		}).then(
 			//Sequelize is going to return the object it created from db
-			function createSuccess(user) {
-				var token = jwt.sign({id:user.id}, "i_am_secret", {expiresIn: 60*6*24});
+			function createSuccess(user){
+				var token = jwt.sign({id:user.id}, "i_am_secret", {expiresIn: 60*60*24});
 				res.json({
 					user: user,
 					message: 'created',
