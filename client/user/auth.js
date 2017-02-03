@@ -12,7 +12,7 @@ $(function() {
 					password: password
 				}
 			};
-}
+
 			//signup post
 			var signup = $.ajax({
 				type: "POST",
@@ -23,15 +23,21 @@ $(function() {
 			//signup done/fail
 			signup.done(function(data) {
 				if (data.sessionToken) {
-					WorkoutLog.setAuthHeader(data.sesssionToken);
+					WorkoutLog.setAuthHeader(data.sessionToken);
+					console.log("Hot Body Downloading");
+					console.log(data.sessionToken);
 				}
 				$("#signup-modal").modal("hide");
 				$("#.disabled").removeClass("disabled");
 				$("#loginout").text("Logout");
-					}).fail(function() {
+				console.log("Don't forget nutrition is an all day effort");
+				//go to define tab
+				// $(".nav-tabs a[href="#define"]").tab("show");
+					})
+				.fail(function() {
 				$("#su_error").text("There was an issue with sign up").show();
 				});
-		
+		}
 		//login method
 
 		//loginoutmethod
