@@ -24,6 +24,9 @@ app.use('/api/user', require('./routes/user'));
 //login route
 app.use('/api/login', require('./routes/session'));
 
+//definition
+app.use('/api/definition', require('./routes/definition'));
+
 //creating link to api and creating feedback it is working//
 app.use('/api/test', function(req, res) {
 	res.send("Hello World");
