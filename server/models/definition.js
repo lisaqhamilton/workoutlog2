@@ -1,3 +1,4 @@
+
 module.exports = function(sequelize, DataTypes) {
 	//with define, the first argument is going to represt a column in the db table
 
@@ -7,5 +8,5 @@ module.exports = function(sequelize, DataTypes) {
 
 		owner: DataTypes.INTEGER
 	},{
-	})
-}
+	});
+};

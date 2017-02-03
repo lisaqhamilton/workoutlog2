@@ -65,7 +65,8 @@ $(function() {
 				$(".disabled").removeClass("disabled");
 				$("#loginout").text("Logout");
 			
-			}).fail(function() {
+			})
+			.fail(function() {
 				$("#li_error").text("There was an issue with sign up").show();
 			});
 		},
@@ -80,8 +81,9 @@ $(function() {
 	}),
 
 	//blind events
-	$("#signup").on("click", WorkoutLog.signup);
+	
 	$("#login").on("click", WorkoutLog.login);
+	$("#signup").on("click", WorkoutLog.signup);
 	$("#loginout").on("click", WorkoutLog.loginout);
 
 	if (window.localStorage.getItem("sessionToken")) {

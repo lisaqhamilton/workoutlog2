@@ -6,6 +6,7 @@ var bodyParser = require('body-parser');
 var sequelize = require('./db.js');
 var User = sequelize.import('./models/user.js');
 
+
 //creates a table in postgres
 User.sync();
 //DANGER: deletes the entire table

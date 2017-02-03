@@ -51,7 +51,8 @@ router.get('/', function(req, res) {
 		},
 		//failure
 		function findAllError(err) {
-			res.send(500, err.message);
+			// res.status(500).send(err.message);
+			res.send('500', err.message);
 		}
 	);
 });
