@@ -42,7 +42,8 @@ $(function(){
 		WorkoutLog.log.setHistory();
 	}
 });	
-// 	//bind enter key
+
+	//bind enter key
 	$(document).on("keypress", function(e) {
 		if (e.which === 13) { //enter key
 			if ($("#signup-modal").is(":visible")) {
@@ -53,6 +54,7 @@ $(function(){
 			}
 		}
 	});
+	
 	var token = window.localStorage.getItem("sessionToken");
 	if (token) {
 		WorkoutLog.setAuthHeader(token);

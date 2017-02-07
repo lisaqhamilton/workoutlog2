@@ -24,6 +24,8 @@ $(function() {
 			signup.done(function(data) {
 				if (data.sessionToken) {
 					WorkoutLog.setAuthHeader(data.sessionToken);
+					WorkoutLog.definition.fetchAll();
+					WorkoutLog.log.fetchAll();
 					console.log("Hot Body Downloading");
 					console.log(data.sessionToken);
 				}
@@ -34,6 +36,7 @@ $(function() {
 				//go to define tab
 				// $(".nav-tabs a[href="#define"]").tab("show");
 					})
+				
 				.fail(function() {
 				$("#su_error").text("There was an issue with sign up").show();
 				});
@@ -60,6 +63,8 @@ $(function() {
 			login.done(function(data) {
 				if (data.sessionToken) {
 					WorkoutLog.setAuthHeader(data.sessionToken);
+					WorkoutLog.definition.fetchAll();
+					WorkoutLog.log.fetchAll();
 				}
 				$("#login-modal").modal("hide");
 				$(".disabled").removeClass("disabled");
@@ -90,3 +95,4 @@ $(function() {
 		$("#loginout").text("Logout");
 	}
 });
+
