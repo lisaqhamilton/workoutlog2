@@ -38,6 +38,9 @@ $(function(){
 		if (target === "#log") {
 			WorkoutLog.log.setDefinitions();
 		}
+		if (target === "#update-log") {
+			WorkoutLog.log.setDefinitions();
+		}
 		if (target  === "#history") {
 		WorkoutLog.log.setHistory();
 	}
