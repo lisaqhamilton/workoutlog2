@@ -5,26 +5,27 @@ $(function() {
 
 			create: function() {
 
-				var def = { 
+			var def = { 
 		         		desc: $("#def-description").val(),
-						type: $("#def-logtype").val()
-				};
-				var postData = { definition: def };
-		      	var define = $.ajax({
+				type: $("#def-logtype").val()
+			};
 
-         	type: "POST",
-	         	url: WorkoutLog.API_BASE + "definition",
-	         	data: JSON.stringify(postData),
-	         	contentType: "application/json"
+			var postData = { definition: def };
+		      	var define = $.ajax({
+		         		type: "POST",
+			         	url: WorkoutLog.API_BASE + "definition",
+			         	data: JSON.stringify(postData),
+			         	contentType: "application/json"
 		      	});
 
 		      	define.done(function(data) {
 	      			WorkoutLog.definition.userDefinitions.push(data.definition);
+	      			$("#def-description").val('');
 		      	});
 		  },
 
 		  fetchAll: function() {
-			 var fetchDefs = $.ajax({
+			var fetchDefs = $.ajax({
 		         type: "GET",
 		         url: WorkoutLog.API_BASE + "definition",
 		         headers: {

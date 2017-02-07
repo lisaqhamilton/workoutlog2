@@ -39,7 +39,7 @@ router.get('/', function(req, res) {
 	Definition
 
 	//findAll by owner method
-		.findAll({
+	.findAll({
 		where: { owner: userid }
 	})
 

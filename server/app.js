@@ -8,7 +8,7 @@ var User = sequelize.import('./models/user.js');
 
 
 //creates a table in postgres
-User.sync();
+sequelize.sync();
 //DANGER: deletes the entire table
 // User.sync({force:true});
 
@@ -17,21 +17,12 @@ app.use(bodyParser.json());
 
 //creating a middleware header//
 app.use(require('./middleware/header'));
-
 app.use(require('./middleware/validate-session'));
 
 app.use('/api/user', require('./routes/user'));
-
-//login route
 app.use('/api/login', require('./routes/session'));
-
-//definition
 app.use('/api/definition', require('./routes/definition'));
-
-//creating link to api and creating feedback it is working//
-app.use('/api/test', function(req, res) {
-	res.send("Hello World");
-});
+app.use('/api/log', require('./routes/log'));
 
 //creating port 3000 and creating feedback to developer it is on//
 app.listen(3000, function() {
