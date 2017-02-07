@@ -33,14 +33,19 @@ $(function() {
 				$(".disabled").removeClass("disabled");
 				$("#loginout").text("Logout");
 				console.log("Don't forget nutrition is an all day effort");
+			
+				// })
 				//go to define tab
-				// $(".nav-tabs a[href="#define"]").tab("show");
-					})
+				// $('.nav-tabs a[href="#define"]'').tab("show");
+				$('.av-tabs a[href="#define"]').tab("show");	
+				$("#su_username").val("");
+				$("#su_password").val("");
 				
+				})
 				.fail(function() {
 				$("#su_error").text("There was an issue with sign up").show();
 				});
-		},
+			},
 		//login method
 		login: function() {
 			//login variables
@@ -69,11 +74,14 @@ $(function() {
 				$("#login-modal").modal("hide");
 				$(".disabled").removeClass("disabled");
 				$("#loginout").text("Logout");
-			
+				$("#li_username").val("");
+				$("#li_password").val("");
+				$('a[href="#define"]').tab("show");
 			})
 			.fail(function() {
 				$("#li_error").text("There was an issue with sign up").show();
 			});
+
 		},
 		//loginoutmethod
 		loginout: function() {
