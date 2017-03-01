@@ -103,4 +103,3 @@ $(function() {
 		$("#loginout").text("Logout");
 	}
 });
-
