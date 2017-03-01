@@ -9,34 +9,16 @@
 #navbar {
 	background-color: #5CCCCC;
 	font: #808080;
-	padding: 10px;
+	padding: 20px;
 	position: center;
 	max-width: auto;
 	border-radius: 10px;
+	font-size: 20px;
 }
 #navlink {
 	margin-left: 30px;
 	font-family: 'Pridi', sans-serif;
 	font-size: 30px;
-}
-#loginbox {
-	background-color: #98D0D0;
-	padding: 20px;
-	margin-top: 150px;
-	/*display: block;*/
-	margin-left: 25%;
-	margin-right: 25%;
-	background-color: #98D0D0;
-	font-family: 'Pridi', serif;
-	display: flex;
-	flex-direction: column;
-	height: 200px;
-	width: 800px;
-	align-items: center;
-	border-radius: 10px;
-	/*position: absolute;*/
-	/*opacity: 0.7;*/
-
 }
 #mainquote {
 	font-size: 60px;
@@ -45,4 +27,12 @@
 	font-family: 'Lobster', cursive;
 	margin-top: 100px;
 	text-shadow: 1px 1px #ffffff;
+}
+#maintitle {
+	font-family: "Lobster", serif;
+	color: #A0E2E2;
+	font-size: 48px;
+	text-align: center;
+	text-shadow: 5px, #ffffff; 
+	margin-top: 50px;
 }
