@@ -10,35 +10,38 @@
 
 	<link href="./bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Pridi" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="css/css.css">
 
 </head>
 
 <body>
+	<div class="container" id="home">
+	<ul class="nav nav-tabs" id="navbar">
+		<li><a href="#home" id="loginout" class="disabled" data-toggle="tab">Login</a>
+		<li class="active"><a href="#home" data-toggle="tab">Home</a></li>	
+		<li><a href="#define" data-toggle="tab">Define</a></li>
+		<li><a href="#log" data-toggle="tab">Log</a></li>
+		<li><a href="#history" data-toggle="tab">View History</a></li>
+		<a href="#update-log" data-toggle="tab" class="disabled" type="hidden"></a>
+		<!-- <li><a href="#" id="testAPI">Test API</a></li> -->
+	</ul>
 	<div class="container">
-		<ul class="nav nav-pills nav-justified" id="navbar">
-			<li class="active"><a href="#home" data-toggle="tab">Home</a></li>	
-			<li><a href="#define" data-toggle="tab">Define</a></li>
-			<li><a href="#log" data-toggle="tab">Log</a></li>
-			<li><a href="#history" data-toggle="tab">View History</a></li>
-			<a href="#update-log" data-toggle="tab" class="disabled" type="hidden"></a>
-		</ul>
-	</div>
-	<div class="jumbotron" id="home">
-		<div class="tab-pane active">
-			<h2>Workout Log!</h2>
-			<div id="forLogin">
-			<button data-toggle="modal" data-target="#login-modal" class="btn btn-primary">Login</button>
-			<button data-toggle="modal" data-target="#signup-modal" class="btn btn-primary">Sign Up</button>
+		<div class="tab-content">
+			<div class="tab-pane active" id="loginpanel">
+				<h2>Workout Log!</h2>
+				<div id="forLogin">
+				<button data-toggle="modal" data-target="#login-modal" class="btn btn-primary">Login</button>
+				<button data-toggle="modal" data-target="#signup-modal" class="btn btn-primary">Sign Up</button>
+				</div>
+				<div id="forLogout" style="display:none;">
+				<button class="btn btn-primary">Logout</button>
+				</div>
 			</div>
-			<div id="forLogout" style="display: none">
-			<button class="btn btn-primary">Logout</button>
-			</div>
-		</div>
-	</div>
-	
-
+<h1 id="mainquote">The only bad workout is the one that didn't happen.</h1>
+</div>
 	<!--Define-->
+
 	<div class="tab-pane fade" id="define">
 		<h2>Define</h2>
 		<label for="def-description">Description</label>
@@ -101,12 +104,12 @@
 				</div>
 				<div class="modal-footer">
 					<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-					<button id="login" type="button" class="btn btn-primary">Login</button>
+					<button id="loginbutton" type="button" class="btn btn-primary">Login</button>
 				</div>
 			</div>
 		</div>
 	</div>	
-
+</div>
 
 <!--signup-->
 <div class="modal fade" id="signup-modal" role="dialog">
