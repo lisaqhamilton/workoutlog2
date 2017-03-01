@@ -1,0 +1,19 @@
+body {
+	background-color: #CFEAA0;
+}
+#navbar {
+	background-color: #A3C864;
+	font: #808080;
+	padding: 10px;
+}
+#home {
+	background-color: #3E6200;
+	color: #7BA335;
+	font-family: 'Pridi', serif;
+	max-width: 50%;
+	max-height: 50%;
+	display: flex;
+	align-items: center;
+	align-self: center;
+
+}
