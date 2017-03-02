@@ -25,10 +25,11 @@
 		<!-- <li><a href="#" id="testAPI">Test API</a></li> -->
 	</ul>
 	<h1 id="maintitle">The only bad workout is the one that didn't happen.</h1>
-	<div class="container">
-		<div class="tab-content">
+	
+		
 			<div class="tab-pane fade" id="home">
-				
+				<div class="well well-sm" id="loginpopbox">
+				<h4> Log in to start tracking your workouts!</h4>
 				<div id="forLogin">
 				<button data-toggle="modal" data-target="#login-modal" class="btn btn-primary">Login</button>
 				<button data-toggle="modal" data-target="#signup-modal" class="btn btn-primary">Sign Up</button>
@@ -36,11 +37,11 @@
 				<div id="forLogout" style="display:none;">
 				<button class="btn btn-primary">Logout</button>
 				</div>
+				</div>
 			</div>
-	
-
 	<!--Define-->
 	<div class="tab-pane fade" id="define">
+		
 		<h2>Define</h2>
 		<label for="def-description">Description</label>
 		<textarea class="form-control" id="def-description" rows="3"></textarea>

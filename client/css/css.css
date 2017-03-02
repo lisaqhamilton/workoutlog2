@@ -12,27 +12,50 @@
 	padding: 20px;
 	position: center;
 	max-width: auto;
-	border-radius: 10px;
-	font-size: 20px;
+	border-radius: 20px;
+	font-size: 12px;
+	margin-left: 20px;
+	margin-right: 20px;
+	padding: 10px;
 }
 #navlink {
 	margin-left: 30px;
 	font-family: 'Pridi', sans-serif;
 	font-size: 30px;
 }
-#mainquote {
+#maintitle {
 	font-size: 60px;
 	text-align: center;
 	color: #A0E2E2;
 	font-family: 'Lobster', cursive;
 	margin-top: 100px;
-	text-shadow: 1px 1px #ffffff;
+	text-shadow: 5px 5px #000000;
 }
-#maintitle {
-	font-family: "Lobster", serif;
-	color: #A0E2E2;
-	font-size: 48px;
+#loginpopbox {
+	width: 300px;
+	height: 150px;
+	margin-left: 550px;
+	margin-top: 100px;
+	background-color: #63E2E2;
+	border-radius: 10px;
+	border-style: inset;
+	opacity: 0.9;
+	align-self: stretch;
+}
+#loginpopbox h4 {
+	font-size: 16px;
+	font-weight: bold;
+	color: black;
 	text-align: center;
-	text-shadow: 5px, #ffffff; 
-	margin-top: 50px;
+	padding-top: 5px;
+	padding-bottom: 15px;
+	display: flex;
+}
+#forLogin {
+	margin-left: 80px;
+	/*padding: 5px;*/
+	align-self: stretch;
+}
+#define {
+	margin-top: 5px;
 }
