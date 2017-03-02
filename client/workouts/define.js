@@ -22,7 +22,8 @@ $(function() {
 	      			WorkoutLog.definition.userDefinitions.push(data.definition);
 	      			$("#def-description").val("");
 	      			$("#def-logtype").val("");
-	      			$('a[href="#log"]').tab("show");
+	      			$('av-tabs[href="#log"]').tab("show");
+	      			
 		      	});
 	      	},
 
@@ -36,6 +37,7 @@ $(function() {
 		      })
 		      .done(function(data) {
 		         WorkoutLog.definition.userDefinitions = data;
+		         
 		      })
 		      .fail(function(err) {
 		         console.log("err");

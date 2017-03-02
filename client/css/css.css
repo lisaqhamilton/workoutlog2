@@ -31,10 +31,10 @@
 	margin-top: 100px;
 	text-shadow: 5px 5px #000000;
 }
-#loginpopbox {
+#forLogin {
 	width: 300px;
 	height: 150px;
-	margin-left: 550px;
+	margin-left: 800px;
 	margin-top: 100px;
 	background-color: #63E2E2;
 	border-radius: 10px;
@@ -42,7 +42,7 @@
 	opacity: 0.9;
 	align-self: stretch;
 }
-#loginpopbox h4 {
+#lforLogin h4 {
 	font-size: 16px;
 	font-weight: bold;
 	color: black;
@@ -56,6 +56,70 @@
 	/*padding: 5px;*/
 	align-self: stretch;
 }
-#define {
-	margin-top: 5px;
+#define h2 {
+	font-size: 48px;
+	color: #55d7d7;
+	font-family: 'Lobster', serif;
+	font-weight: bold;
+	text-align: center;
+}
+#define h4 {
+	font-size: 36px;
+	color: #55d7d7;
+	font-family: 'Lobster', serif;
+	text-align: center;
+}
+#defineworkout{
+	margin-top: 30px;
+	margin-left: 350px;
+	width: 800px;
+	height: 300px;
+	border-style: bold;
+	border-radius: 30px;
+	background-color: #A0E2E2;
+	opacity: 0.9;
+	text-align: center;
+	padding-top: 5px;
+}
+#def-description {
+	margin-bottom: 10px;
+	border-radius: 10px;
+	padding: 5px;
+}
+#def-logtype {
+	margin-top: 10px;
+	border-radius: 10px;
+	padding: 5px;
+}
+#def-save {
+	margin-top: 20px;
+	background-color: #0e8a8a;
+	color: black;
+}
+#log-workout{
+	margin-top: 30px;
+	margin-left: 350px;
+	width: 800px;
+	height: 300px;
+	border-style: bold;
+	border-radius: 30px;
+	background-color: #A0E2E2;
+	opacity: 0.9;
+	text-align: center;
+	padding-top: 5px;
+}
+#log-result {
+	margin-bottom: 10px;
+	border-radius: 10px;
+	padding: 5px;
+}
+#log-definition {
+	margin-top: 10px;
+	border-radius: 10px;
+	padding: 5px;
+}
+#log-save {
+	margin-top: 20px;
+	background-color: #0e8a8a;
+	color: black;
 }

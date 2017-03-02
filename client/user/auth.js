@@ -71,12 +71,15 @@ $(function() {
 					WorkoutLog.definition.fetchAll();
 					WorkoutLog.log.fetchAll();
 				}
+				$("#forLogin").hide('fast');
+				$("#maintitle").hide('fast');
 				$("#login-modal").modal("hide");
 				$(".disabled").removeClass("disabled");
 				$("#loginout").text("Logout");
 				$("#li_username").val("");
 				$("#li_password").val("");
 				$('a[href="#define"]').tab("show");
+				window.alert("Don't forget nutrition is an all day effort!");
 			})
 			.fail(function() {
 				$("#li_error").text("There was an issue with sign up").show();
