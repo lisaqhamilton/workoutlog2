@@ -22,7 +22,7 @@ $(function() {
 	      			WorkoutLog.definition.userDefinitions.push(data.definition);
 	      			$("#def-description").val("");
 	      			$("#def-logtype").val("");
-	      			$('av-tabs[href="#log"]').tab("show");
+	      			// $("a[href='#log']").tab("show");
 	      			
 		      	});
 	      	},
@@ -48,6 +48,7 @@ $(function() {
 
 	// bindings
 		$("#def-save").on("click", WorkoutLog.definition.create);
+		
 
 
    // fetch definitions if we already are authenticated and refreshed
